@@ -1,0 +1,127 @@
+/* Position the button in the top right */
+#themeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: #1b0202;
+    transition: all 0.3s ease;
+    z-index: 1000; /* Keeps it above everything else */
+}
+
+/* Default Light Mode Colors */
+body {
+    background-color: #e3deef;
+    color: #333333;
+    transition: background 0.3s, color 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+/* Dark Mode Colors */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode #themeToggle {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+/* Optional: Style the tasks to look better in dark mode */
+body.dark-mode li {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto;
+    background: #5619c7;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+   
+
+
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    
+    background-color:  #160279;
+    color: white;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.filters {
+    margin: 15px 0;
+}
+
+.filters button {
+    background-color: #19037d;
+    margin: 3px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: #f3f3f3;
+    margin-top: 8px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li span {
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li button {
+    background-color: #e74c3c;
+    font-size: 12px;
+    padding: 5px 8px;
+}
+
+.logout {
+    background-color: red;
+    margin-top: 15px;
+    width: 100%;
+}

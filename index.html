@@ -2,20 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>Advanced To-Do List</title>
     <link rel="stylesheet" href="style.css">
-
-</head>    
+</head>
 <body>
-    <h1>HOME Page</h1>
-    <p>
-        Welcome to my website!
-    </p>
-    <a href="test.html">
-        <button>Go to Test Page</button>
-    </a>
-    <img src="My Image.jpg" alt="My Image" width="300">
+    <button id="themeToggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
 
+<div class="container" id="loginBox">
+    <h2>Login</h2>
+    <input type="text" id="usernameInput" placeholder="Enter your name">
+    <button onclick="login()">Login</button>
+</div>
+
+<div class="container" id="appBox" style="display:none;">
+     
+    <h1 id="welcome"></h1>
+
+
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button onclick="addTask()">Add</button>
+
+    <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search tasks..." onkeyup="searchTasks()">
+
+        <button onclick="showAll()">All</button>
+        <button onclick="showCompleted()">Completed</button>
+        <button onclick="showActive()">Active</button>
+    </div>
+    
+
+    <ul id="taskList"></ul>
+
+    <button onclick="logout()" style="background:red;margin-top:15px;">
+        Logout
+    </button>
+</div>
+
+
+<script src="script.js"></script>
 </body>
+
 </html>
